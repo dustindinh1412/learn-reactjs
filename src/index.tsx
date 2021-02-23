@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  /*
+    StrictMode: Cảnh báo lỗi trong môi trường dev
+  */
   <React.StrictMode>
     <App />
   </React.StrictMode>,
