@@ -1,7 +1,7 @@
 import React from 'react';
 import AlbumFeature from './features/Album';
 import TodoFeature from './features/Todo';
-import './App.css'
+import './App.css';
 import ColorBox from './components/ColorBox';
 function App() {
 
