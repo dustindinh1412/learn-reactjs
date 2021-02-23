@@ -1,0 +1,11 @@
+.album-card__item {
+
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.album-card__item-image {
+    border-radius: 5px;
+    width: 175px;
+    height: 175px;
+}

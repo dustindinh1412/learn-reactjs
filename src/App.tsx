@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import AlbumFeature from './features/Album';
+import TodoFeature from './features/Todo';
+import './App.css'
+import ColorBox from './components/ColorBox';
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Dinh Huu Kien v2
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2 className="feature-title"> Todo Feature </h2>
+       <TodoFeature/>
+       <h2 className="feature-title"> Album Feature </h2>
+       <AlbumFeature/>
+
+       <ColorBox/>
     </div>
   );
 }
+
 
 export default App;
