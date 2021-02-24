@@ -3,7 +3,11 @@ import { Album } from '../../../../interfaces/AlbumItemInterface';
 import AlbumItem from '../AlbumItem';
 
 import './style.css';
-function AlbumList(props: {albumListItems: Album[]}) {
+interface Props {
+    albumListItems: Album[],
+}
+
+const AlbumList: React.FC<Props> = (props: Props) => {
     const {albumListItems} = props;
     return (
         <ul className="album-card">

@@ -2,12 +2,19 @@ import React from 'react';
 import {Todo} from '../../../interfaces/TodoItemInterface';
 import TodoItem from '../TodoItem';
 
-function TodoList(props: {todoItemsList: Todo[], onTodoItemClick: Function}) {
+interface Props {
+    todoItemsList: Todo[],
+    onTodoItemClick?: Function
+}
+
+const TodoList = (props: Props) => {
+    
     const {todoItemsList,onTodoItemClick} = props;
 
-    function handleItemClick(index: number, status: string) {
+    const handleItemClick = (index: number) => {
         if (!onTodoItemClick) return;
-        onTodoItemClick(index,status);
+        
+        onTodoItemClick(index);
     }
 
     return (
@@ -15,11 +22,11 @@ function TodoList(props: {todoItemsList: Todo[], onTodoItemClick: Function}) {
             {
                 todoItemsList.map( (todoItem, index) => {
                     return <TodoItem 
-                        key={todoItem.id} 
-                        todoItem={todoItem} 
-                        onItemClick={()=>handleItemClick(index,todoItem.status)}
-                        index= {index}
-                        />
+                                key={todoItem.id} 
+                                todoItem={todoItem} 
+                                onItemClick={handleItemClick}
+                                index= {index}
+                            />
                 })
             }
         </ul>

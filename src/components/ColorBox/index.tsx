@@ -7,7 +7,7 @@ function ColorBox() {
 
     const [color, setColor] = useState('black');
     
-    function changeColor() {
+    function changeColor(): void {
         setColor( colors[generateIntegerNumber(5)]);
     }
     return (
@@ -18,7 +18,7 @@ function ColorBox() {
 }
 
 
-function generateIntegerNumber(max: number) {
+function generateIntegerNumber(max: number): number {
    return Math.floor(Math.random() * Math.floor(max));
 }
 

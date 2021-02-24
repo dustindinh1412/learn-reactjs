@@ -1,28 +1,34 @@
 import React from 'react';
 import {Todo} from '../../../interfaces/TodoItemInterface';
+import classnames from 'classnames';
 
 import './style.css';
-function TodoItem(props: {todoItem: Todo, onItemClick: Function, index: number}) {
+
+interface Props {
+    todoItem: Todo;
+    onItemClick?: Function,
+    index: number
+}
+
+const TodoItem: React.FC<Props> = (props: Props) => {
+
     const {todoItem, onItemClick, index} = props;
 
-    function handleClick(index: number, status: string, event: any) {
+    const handleClick = (index: number) => {
         if (!onItemClick) return;
 
-        const clickedItem = event.target;
-
-        if ( status === 'doing') clickedItem.className += " todo-item--completed";
-        else clickedItem.className = "todo-item";
-
-        onItemClick(index,todoItem.status);
+        onItemClick(index);
     }
 
     return (
         <li 
-            className="todo-item" 
+            className={classnames({
+                'todo-item': true,
+                'todo-item--completed': todoItem.status === 'completed'})} 
             key={todoItem.id} 
-            onClick={ (event) => handleClick(index, todoItem.status, event)}> 
+            onClick={ () => handleClick(index)}> 
             {todoItem.title} 
-        </li>
+        </li>   
             
     );
 }

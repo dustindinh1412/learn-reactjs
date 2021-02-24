@@ -1,3 +1,6 @@
 .feature-title {
   text-align: center;
 }
+.current-page {
+  color: red;
+}

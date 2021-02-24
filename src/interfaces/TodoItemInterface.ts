@@ -1,5 +1,7 @@
+type TodoStatus = "doing" | "completed";
+
 export interface Todo {
     id:     number,
     title:  string,
-    status: string,
+    status: TodoStatus,
 }

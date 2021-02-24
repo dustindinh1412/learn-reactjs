@@ -2,8 +2,10 @@ import React from 'react';
 import { Album } from '../../../../interfaces/AlbumItemInterface';
 
 import './style.css';
-
-function AlbumItem(props: {albumItem: Album}) {
+interface Props {
+    albumItem: Album
+}
+const AlbumItem: React.FC<Props> = (props: {albumItem: Album}) => {
     const {albumItem} = props;
     return (
         <li className="album-card__item">
