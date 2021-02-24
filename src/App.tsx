@@ -2,9 +2,9 @@ import React from 'react';
 import AlbumFeature from './features/Album';
 import TodoFeature from './features/Todo';
 import './App.css';
-import ColorBox from './components/ColorBox';
-import {Clock, BetterClock} from './components/Clock';
-import {NavLink,Route, Link, Switch, Redirect} from 'react-router-dom';
+//import ColorBox from './components/ColorBox';
+import {Clock} from './components/Clock';
+import {NavLink,Route, Switch, Redirect} from 'react-router-dom';
 function App() {
 
   return (
