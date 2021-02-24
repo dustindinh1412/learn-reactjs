@@ -14,6 +14,7 @@ function App() {
         <NavLink exact to="/" activeClassName="current-page"  > Todo List </NavLink>
         <NavLink to="/todos" activeClassName="current-page"> Todo List </NavLink>
         <NavLink to="/albums" activeClassName="current-page"> Album List </NavLink>
+        <NavLink to="/other" activeClassName="current-page"> Other </NavLink>
 
         <Switch >
 
